@@ -1,0 +1,53 @@
+{
+    "name": "vaimo/binary-geckodriver",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "description": "Utility for downloading GeckoDriver (Firefox automation) binary for current os/platform",
+    "require": {
+        "ext-zip": "*",
+        "composer-plugin-api": "^1.0"
+    },
+    "require-dev": {
+        "vaimo/composer-changelogs": "^0.9.1"
+    },
+    "replace": {
+        "lbaey/chromedriver": "*"
+    },
+    "authors": [
+        {
+            "name": "Laurent Baey",
+            "email": "laurent.baey@gmail.com"
+        },
+        {
+            "name": "Allan Paiste",
+            "email": "allan.paiste@vaimo.com"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/vaimo/binary-geckodriver",
+        "docs": "https://github.com/vaimo/binary-chromedriver",
+        "issues": "https://github.com/vaimo/binary-chromedriver/issues"
+    },
+    "keywords": [
+        "geckodriver",
+        "firefox automation",
+        "testing",
+        "test-automation",
+        "acceptance testing",
+        "browser testing",
+        "downloader",
+        "binary downloader",
+        "binary"
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vaimo\\GeckoDriver\\": "src"
+        }
+    },
+    "extra": {
+        "class": "Vaimo\\GeckoDriver\\Plugin",
+        "changelog": {
+            "source": "changelog.json"
+        }
+    }
+}

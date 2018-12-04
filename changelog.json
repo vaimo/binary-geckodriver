@@ -1,0 +1,9 @@
+{
+    "1.0.0": {
+        "feature": [
+            "download specified version of geckodriver",
+            "detect installed browser version when possible",
+            "download latest version of geckodriver"
+        ]
+    }
+}
