@@ -6,7 +6,7 @@ Downloads correct geckodriver version for your development platform, whether it'
 By default either appropriate version (that matches with installed browser) or latest version of the 
 driver will be downloaded.
     
-## Configuring Extra
+## Configuration
 
 If you want a specific version of GeckoDriver, use:
 
