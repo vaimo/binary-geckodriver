@@ -1,12 +1,11 @@
 # binary-geckodriver
 
-Downloads correct geckodriver version for your development platform, whether it's Linux 
-(32bits or 64bits), OSX or Windows.
+Downloads geckodriver binary for Linux (32bits or 64bits), OSX or Windows. 
 
-The plugin will either:
+The binary version is determined by the following factors:
 
-* downloads driver for the browser that is currently installed
-* downloads driver for specified/configured version (see below under 'Configuration' topic)
+* what browser version is currently installed (if binary found from the system).
+* specified/configured version (see below under 'Configuration' topic)
     
 ## Configuration
 
