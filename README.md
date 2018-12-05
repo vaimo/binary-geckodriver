@@ -21,6 +21,3 @@ Although the binary downloader usually ends up positively detecting the appropri
   }
 }
 ```
-
-If you don't specify GeckoDriver version, either appropriate version (that matches with installed 
-browser) or latest version of the driver will be downloaded.
