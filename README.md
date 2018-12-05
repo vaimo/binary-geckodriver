@@ -1,6 +1,6 @@
 # binary-geckodriver
 
-Downloads geckodriver binary for Linux (32bits or 64bits), OSX or Windows. 
+Downloads geckodriver binary for Linux (32bits or 64bits), macOS (Mac OS X) and Windows. 
 
 The binary version is determined by the following factors:
 
