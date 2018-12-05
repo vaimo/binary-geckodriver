@@ -9,8 +9,8 @@ use Vaimo\GeckoDriver\Installer\PlatformAnalyser as Platform;
 
 class Config
 {
-    const REQUEST_VERSION = 'base';
-    const REQUEST_DOWNLOAD = 'base';
+    const REQUEST_VERSION = 'version';
+    const REQUEST_DOWNLOAD = 'download';
     
     /**
      * @var \Composer\Package\PackageInterface
@@ -47,11 +47,11 @@ class Config
     
     public function getRequestUrlConfig()
     {
-        $baseUrl = 'https://geckodriver.storage.googleapis.com';
+        $baseUrl = 'https://github.com/mozilla/geckodriver/releases/download';
         
         return [
-            self::REQUEST_VERSION => sprintf('%s/LATEST_RELEASE', $baseUrl),
-            self::REQUEST_DOWNLOAD => sprintf('%s/{{version}}/{{file}}', $baseUrl)
+            self::REQUEST_VERSION => false,
+            self::REQUEST_DOWNLOAD => sprintf('%s/v{{version}}/{{file}}', $baseUrl)
         ];
     }
     
@@ -59,13 +59,13 @@ class Config
     {
         return [
             Platform::TYPE_LINUX32 => [
-                '/usr/bin/google-chrome'
+                '/usr/bin/firefox'
             ],
             Platform::TYPE_LINUX64 => [
-                '/usr/bin/google-chrome'
+                '/usr/bin/firefox'
             ],
             Platform::TYPE_MAC64 => [
-                '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+                '/Applications/Firefox.app/Contents/MacOS/firefox'
             ]
         ];
     }
@@ -73,48 +73,35 @@ class Config
     public function getBrowserVersionPollingConfig()
     {
         return [
-            '%s -version' => ['Google Chrome %s']  
+            '%s -v' => ['Mozilla Firefox %s']  
         ];
     }
     
     public function getDriverVersionPollingConfig()
     {
         return [
-            '%s --version' => ['GeckoDriver %s (']
+            '%s --version' => ['geckodriver %s (']
         ];
     }
     
     public function getBrowserDriverVersionMap()
     {
         return [
-            '72' => '',
-            '69' => '2.44',
-            '68' => '2.42',
-            '67' => '2.41',
-            '66' => '2.40',
-            '65' => '2.38',
-            '64' => '2.37',
-            '63' => '2.36',
-            '62' => '2.35',
-            '61' => '2.34',
-            '60' => '2.33',
-            '57' => '2.28',
-            '54' => '2.25',
-            '53' => '2.24',
-            '51' => '2.22',
-            '44' => '2.19',
-            '42' => '2.15'
+            '64' => '',
+            '57' => '0.23.0',
+            '55' => '0.20.1',
+            '1' => '0.16.1'
         ];
     }
     
     public function getRemoteFileNames()
     {
         return [
-            Platform::TYPE_LINUX32 => 'geckodriver_linux32.zip',
-            Platform::TYPE_LINUX64 => 'geckodriver_linux64.zip',
-            Platform::TYPE_MAC64 => 'geckodriver_mac64.zip',
-            Platform::TYPE_WIN32 => 'geckodriver_win32.zip',
-            Platform::TYPE_WIN64 => 'geckodriver_win32.zip'
+            Platform::TYPE_LINUX32 => 'geckodriver-v{{version}}-linux32.tar.gz',
+            Platform::TYPE_LINUX64 => 'geckodriver-v{{version}}-linux64.tar.gz',
+            Platform::TYPE_MAC64 => 'geckodriver-v{{version}}-macos.tar.gz',
+            Platform::TYPE_WIN32 => 'geckodriver-v{{version}}-win32.zip',
+            Platform::TYPE_WIN64 => 'geckodriver-v{{version}}-win64.zip'
         ];
     }
 

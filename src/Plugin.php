@@ -27,7 +27,6 @@ class Plugin implements \Composer\Plugin\PluginInterface, \Composer\EventDispatc
     
     public function installDriver()
     {
-        return;
         $this->driverInstaller->execute();
     }
 }
