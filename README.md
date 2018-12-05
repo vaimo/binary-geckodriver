@@ -3,8 +3,10 @@
 Downloads correct geckodriver version for your development platform, whether it's Linux 
 (32bits or 64bits), OSX or Windows.
 
-By default either appropriate version (that matches with installed browser) or latest version of the 
-driver will be downloaded.
+The plugin will either:
+
+* downloads driver for the browser that is currently installed
+* downloads driver for specified/configured version (see below under 'Configuration' topic)
     
 ## Configuration
 
