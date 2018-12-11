@@ -28,6 +28,10 @@
         "test-automation",
         "acceptance testing",
         "browser testing",
+        "composer plugin",
+        "composer extension",
+        "browser driver",
+        "webdriver",        
         "downloader",
         "binary downloader",
         "binary"
