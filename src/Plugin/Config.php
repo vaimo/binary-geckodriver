@@ -5,13 +5,10 @@
  */
 namespace Vaimo\GeckoDriver\Plugin;
 
-use Vaimo\GeckoDriver\Installer\PlatformAnalyser as Platform;
+use Vaimo\WebDriverBinaryDownloader\Interfaces\PlatformAnalyserInterface as Platform;
 
-class Config
+class Config implements \Vaimo\WebDriverBinaryDownloader\Interfaces\ConfigInterface
 {
-    const REQUEST_VERSION = 'version';
-    const REQUEST_DOWNLOAD = 'download';
-    
     /**
      * @var \Composer\Package\PackageInterface
      */
@@ -66,6 +63,12 @@ class Config
             ],
             Platform::TYPE_MAC64 => [
                 '/Applications/Firefox.app/Contents/MacOS/firefox'
+            ],
+            Platform::TYPE_WIN32 => [
+                'C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe'
+            ],
+            Platform::TYPE_WIN64 => [
+                'C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe'
             ]
         ];
     }
@@ -73,7 +76,8 @@ class Config
     public function getBrowserVersionPollingConfig()
     {
         return [
-            '%s -v' => ['Mozilla Firefox %s']  
+            '%s -v' => ['Mozilla Firefox %s'],
+            'wmic datafile where name="%s" get Version /value' => ['Version=%']
         ];
     }
     
@@ -114,5 +118,15 @@ class Config
             Platform::TYPE_WIN32 => 'geckodriver.exe',
             Platform::TYPE_WIN64 => 'geckodriver.exe'
         ];
+    }
+
+    public function getDriverVersionHashMap()
+    {
+        return [];
+    }
+
+    public function getExecutableFileRenames()
+    {
+        return [];
     }
 }
