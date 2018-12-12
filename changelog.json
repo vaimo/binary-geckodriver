@@ -1,5 +1,5 @@
 {
-    "DEV.2.0.0": {
+    "2.0.0": {
         "breaking": [
             "(code) started to rely on external general-issue library for most of the implementation; only configuration remains in this package"
         ],
