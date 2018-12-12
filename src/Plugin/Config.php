@@ -65,10 +65,10 @@ class Config implements \Vaimo\WebDriverBinaryDownloader\Interfaces\ConfigInterf
                 '/Applications/Firefox.app/Contents/MacOS/firefox'
             ],
             Platform::TYPE_WIN32 => [
-                'C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe'
+                'C:\\\\Program Files (x86)\\\\Mozilla Firefox\\\\firefox.exe'
             ],
             Platform::TYPE_WIN64 => [
-                'C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe'
+                'C:\\\\Program Files (x86)\\\\Mozilla Firefox\\\\firefox.exe'
             ]
         ];
     }
@@ -77,14 +77,14 @@ class Config implements \Vaimo\WebDriverBinaryDownloader\Interfaces\ConfigInterf
     {
         return [
             '%s -v' => ['Mozilla Firefox %s'],
-            'wmic datafile where name="%s" get Version /value' => ['Version=%']
+            'wmic datafile where name="%s" get Version /value' => ['Version=([0-9].+)']
         ];
     }
     
     public function getDriverVersionPollingConfig()
     {
         return [
-            '%s --version' => ['geckodriver %s (']
+            '%s --version' => ['geckodriver ([0-9].+) \(']
         ];
     }
     
