@@ -1,4 +1,9 @@
 {
+    "2.0.2": {
+        "fix": [
+            "added latest gecko-driver reference"
+        ]
+    },
     "2.0.1": {
         "fix": [
             "bad unescaped path configured for browser binary for Windows which resulted in version polling not working"

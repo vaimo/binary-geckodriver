@@ -91,7 +91,8 @@ class Config implements \Vaimo\WebDriverBinaryDownloader\Interfaces\ConfigInterf
     public function getBrowserDriverVersionMap()
     {
         return [
-            '64' => '',
+            '66' => '',
+            '65' => '0.24.0',
             '57' => '0.23.0',
             '55' => '0.20.1',
             '1' => '0.16.1'
