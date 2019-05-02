@@ -2,7 +2,7 @@
 
 _This file has been auto-generated from the contents of changelog.json_
 
-## 2.0.3
+## 2.0.3 (2019-05-03)
 
 ### Fix
 
@@ -13,7 +13,6 @@ _This file has been auto-generated from the contents of changelog.json_
 * introduced the use of Static Code Analysis tools
 * code downgraded so to make the package installable on relatively old php versions
 
-Links: [src](https://github.com/vaimo/binary-geckodriver/tree/2.0.3) [diff](https://github.com/vaimo/binary-geckodriver/compare/2.0.2...2.0.3)
 
 ## 2.0.2 (2019-02-27)
 
@@ -21,7 +20,6 @@ Links: [src](https://github.com/vaimo/binary-geckodriver/tree/2.0.3) [diff](http
 
 * added latest gecko-driver reference
 
-Links: [src](https://github.com/vaimo/binary-geckodriver/tree/2.0.2) [diff](https://github.com/vaimo/binary-geckodriver/compare/2.0.1...2.0.2)
 
 ## 2.0.1 (2018-12-12)
 
@@ -29,7 +27,6 @@ Links: [src](https://github.com/vaimo/binary-geckodriver/tree/2.0.2) [diff](http
 
 * bad unescaped path configured for browser binary for Windows which resulted in version polling not working
 
-Links: [src](https://github.com/vaimo/binary-geckodriver/tree/2.0.1) [diff](https://github.com/vaimo/binary-geckodriver/compare/2.0.0...2.0.1)
 
 ## 2.0.0 (2018-12-12)
 
@@ -41,7 +38,6 @@ Links: [src](https://github.com/vaimo/binary-geckodriver/tree/2.0.1) [diff](http
 
 * support for browser version detection added for Windows
 
-Links: [src](https://github.com/vaimo/binary-geckodriver/tree/2.0.0) [diff](https://github.com/vaimo/binary-geckodriver/compare/1.0.0...2.0.0)
 
 ## 1.0.0 (2018-12-05)
 
@@ -49,5 +45,3 @@ Links: [src](https://github.com/vaimo/binary-geckodriver/tree/2.0.0) [diff](http
 
 * download specified version of geckodriver
 * detect installed browser version when possible (when Firefox installed)
-
-Links: [src](https://github.com/vaimo/binary-geckodriver/tree/1.0.0) [diff](https://github.com/vaimo/binary-geckodriver/compare/f97c0936f798cd6bdb7db2469dc922bc42b488ab...1.0.0)
