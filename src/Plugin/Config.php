@@ -76,7 +76,7 @@ class Config implements \Vaimo\WebDriverBinaryDownloader\Interfaces\ConfigInterf
     public function getBrowserVersionPollingConfig()
     {
         return [
-            '%s -v' => ['Mozilla Firefox %s'],
+            '%s -v' => ['Mozilla Firefox ([0-9].+)'],
             'wmic datafile where name="%s" get Version /value' => ['Version=([0-9].+)']
         ];
     }
