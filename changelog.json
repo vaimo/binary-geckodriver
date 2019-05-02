@@ -7,6 +7,10 @@
     "2.0.3": {
         "fix": [
             "wrong kind of extraction pattern provided for version poller (sscanf pattern used but code behind the scenes was expecting RegEx)"
+        ],
+        "maintenance": [
+            "introduced the use of Static Code Analysis tools",
+            "code downgraded so to make the package installable on relatively old php versions"
         ]
     },
     "2.0.2": {
